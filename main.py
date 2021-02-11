@@ -13,15 +13,24 @@ pdfReader = PyPDF2.PdfFileReader(book)
 # get the number of pages
 pages = pdfReader.numPages
 
-print(pages)
+print(f"Number of Pages in the PDF: {pages}")
 
 
-# # initlialize the pyttsx3 module
+
 # speaker = pyttsx3.init()
 
+page_number = int(input("Enter the number of the page that you want to read: "))
+
+page = pdfReader.getPage(page_number)
+text = page.extractText()
+print(text)
+
+"""
 for num in range(1, pages):
-  page = pdfReader.getPage(1)
+  page = pdfReader.getPage(page_number)
   text = page.extractText()
   print(text)
   # speaker.say(text)
   # speaker.runAndWait()
+
+"""
