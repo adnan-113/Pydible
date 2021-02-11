@@ -7,4 +7,6 @@ The steps to initiate the .py are given bellow
 In the command shell, These 2 packages have to be installed
 
 pip install pyttsx3
+
+
 pip install PyPDF2
